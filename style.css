@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/* Default Styles (Mobile First) */
+body {
+    background-color: antiquewhite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'ubuntu', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 0 10px;
+    flex-wrap: wrap;
+}
+
+.brand img {
+    width: 40px;
+    padding: 0 8px;
+}
+
+nav ul li {
+    padding: 0 8px;
+    font-size: 1rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.container {
+    min-height: 50vh;
+    background-color: black;
+    color: white;
+    font-family: 'varela round', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 90%;
+    border-radius: 12px;
+    padding: 15px;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.songItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    margin: 12px 0;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.songItem img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.timestamp {
+    margin-left: 20px;
+}
+
+.bottom {
+    position: sticky;
+    bottom: 0;
+    height: 100px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+#myprogressbar {
+    width: 80vw;
+    cursor: pointer;
+}
+
+/* For Tablets and Above */
+@media (min-width: 768px) {
+    nav ul li {
+        padding: 0 12px;
+        font-size: 1.2rem;
+    }
+
+    .brand img {
+        width: 50px;
+    }
+
+    .container {
+        flex-direction: row;
+        width: 70%;
+        padding: 20px;
+    }
+
+    .songItem img {
+        width: 50px;
+    }
+
+    .songItem {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #myprogressbar {
+        width: 60vw;
+    }
+}
+
+/* For Desktops */
+@media (min-width: 1024px) {
+    nav ul {
+        justify-content: space-between;
+    }
+
+    .brand {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        width: 60%;
+    }
+
+    #myprogressbar {
+        width: 50vw;
+    }
+
+    .songItem {
+        padding: 20px;
+        font-size: 1.1rem;
+    }
+}
